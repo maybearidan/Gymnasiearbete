@@ -95,16 +95,14 @@ footer > p{
     text-align: right;
 }
 
-/* The alert message box */
 .alert {
     padding: 20px;
-    background-color: #303030; /* Red */
+    background-color: #303030;
     color: white;
     margin-bottom: 15px;
     text-align: left;
   }
   
-  /* The close button */
   .closebtn {
     margin-left: 15px;
     color: white;
@@ -116,7 +114,7 @@ footer > p{
     transition: 0.3s;
   }
   
-  /* When moving the mouse over the close button */
+
   .closebtn:hover {
-    color: black;
+    color: rgb(145, 145, 145);
   }
