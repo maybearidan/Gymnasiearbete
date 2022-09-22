@@ -155,3 +155,8 @@ hr.rounded {
     font-family: SofiaProBold, SofiaPro, -apple-system, BlinkMacSystemFont, sans-serif;
     color: white;
 }
+
+.mail{
+    color:gray;
+    text-decoration: none;
+}
