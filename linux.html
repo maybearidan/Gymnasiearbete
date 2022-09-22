@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--Här bestämmer jag vilket typ av dokument det här är-->
+
+<html lang="sv">
+<!--Här bestämmer jag språk på sidan för textläsar hjälpmedel.-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows - OpenOS (SE)</title>
+    <link rel="icon" type="image/x-icon" href="images/hackmacfavicon.ico"/>
+    <!--Här bestämmer jag texten som ska stå på flikraden på webbläsaren.-->
+    <link href="style/styles.css" rel="stylesheet">
+    <!--Här länkar jag HTML dokumetet med min CSS. Alla sidor använder samma css.-->
+</head>
+
+<body>
+    <header>
+        <div class="toolbar">
+            <a href="index.html">Hem</a>
+            <a href="windows.html">Windows</a>
+            <a href="linux.html">Linux</a>
+            <a href="macos.html">macOS</a>
+            <a href="om.html">Om OpenOS</a>
+            <a href="en/windows.html" lang="en">Switch language (to English)</a>
+        </div>
+        <div class="quicknav">
+            <a href="windows.html">Förberedelser</a>
+            <a href="windows.html">Skapa installationsmedia</a>
+            <a href="windows.html">Förberedelser för BIOS</a>
+            <a href="windows.html">Starta till mediat</a>
+            <a href="windows.html">Installation</a>
+            <a href="windows.html">OOBE</a>
+            <a href="windows.html">Efter installationen</a>
+        </div>
+    </header>
+    <main>
+        <br>
+        <h1>Nu installerar vi Windows på din dator!</h1>
+        <p>Att installera Windows är mer eller mindre en ganska enkel sak att göra.<br> Det finns dock några tips här, så jag rekomenderar fortfarande att du läser detta!</p>
+        <a href="linux.html" class="button">Redan installerat? Gå till Linux! → </a>
+        <br>
+        <hr class="rounded">
+        <br>
+        <div class="installertext">
+            <p class="bold" id="preparement">Förberedelser</p>
+            <p>Vi börjar med vad du behöver! <br>För att installera Windows måste du ha:</p>
+            <ul>
+                <li>ett USB minne som åt minstånde är 8GB</li>
+                <li>en nätverksanslutning</li>
+                <li>en annan dator eller ett färdig USB minne med Windows</li>
+                <li>ungefär två timmar</li>
+            </ul>
+            <p>Systemkrav för Windows 10</p>
+            <ul>
+                <li>en 1GHz eller snabbare CPU</li>
+                <li>1GB RAM för 32 bit, eller 2GB RAM för 64 bit (eller mer)</li>
+                <li>16GB lagring för 32 bit eller 64GB lagring för 64 bit (eller mer)</li>
+                <li>ett grafikkort med drivrutiner som har signerats av Microsoft</li>
+            </ul>
+            <p>Systemkrav för Windows 11</p>
+            <ul>
+                <li>en 1GHz CPU som stöds med åt minestånde två kärnor (eller snabbare)</li>
+                <li>4GB RAM (eller mer))</li>
+                <li>64GB lagring (eller mer) (helst en SSD)</li>
+                <li>ett grafikkort med drivrutiner som har signerats av Microsoft</li>
+                <li>TPM 2.0</li>
+                <li>UEFI och Secure Boot</li>
+            </ul>
+            <br>
+            <p class="bold">Skapa installationsmedia</p>
+            <p>Om du redan har installationsmedia för Windows kan du hoppa över till "Förbereder BIOS".</p>
+            <p class="bold">Metod 1 - använda Microsoft Windows Media Creation Tool</p>
+            <p>Microsoft har ett verktyg man kan använda för att skapa ett installationsmedium. Det är det absolut lättaste sättet att göra det på, och är nog snabbast.<br>Detta verktyg är dock endast kompatibelt med Windows. Om du inte har tillgång till en Windows dator kan du gå till Metod 2 istället. <br>Börja med att söka efter "Microsoft Windows Media Creatio Tool for Windows 10/11" beronde på vilken verison du vill köra.<br>Sedan kopplar du in USB minnet du vill använda och kör programmet du ladade ned.</p>
+            <p class="bold">Metod 2 - skapa installationsmedia manuellt</p>
+            <p class="bold">Metod 3 - köpa ett installationsmedia</p>
+        </div>
+    </main>
+    <footer>
+        <!--Och här bestämmer jag vad som finns i min footer, asså min sidfot-->
+        <p>"Windows" är ett registerat varumärke av Microsoft Corporation - Den här sidan skapades av Adnan Bukvic</p>
+    </footer>
+</body>

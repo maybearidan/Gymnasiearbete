@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--Här bestämmer jag vilket typ av dokument det här är-->
+
+<html lang="en">
+<!--Här bestämmer jag språk på sidan för textläsar hjälpmedel.-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows - OpenOS (EN)</title>
+    <link rel="icon" type="image/x-icon" href="images/hackmacfavicon.ico"/>
+    <!--Här bestämmer jag texten som ska stå på flikraden på webbläsaren.-->
+    <link href="../style/styles.css" rel="stylesheet">
+    <!--Här länkar jag HTML dokumetet med min CSS. Alla sidor använder samma css.-->
+</head>
+
+<body>
+    <header>
+        <div class="toolbar">
+            <a href="index.html">Home</a>
+            <a href="windows.html">Windows</a>
+            <a href="linux.html">Linux</a>
+            <a href="macos.html">macOS</a>
+            <a href="about.html">About OpenOS</a>
+            <a href="../windows.html" lang="sv">Byt språk (till svenska)</a>
+        </div>
+        <div class="quicknav">
+            <a href="#preparement">Preparement</a>
+            <a href="windows.html">Creating the install media</a>
+            <a href="windows.html">Preparing BIOS</a>
+            <a href="windows.html">Booting to the media</a>
+            <a href="windows.html">Installation</a>
+            <a href="windows.html">OOBE</a>
+            <a href="#test">Post-install</a>
+        </div>
+    </header>
+    <main>
+        <br>
+        <h1>Let's install Windows on your PC!</h1>
+        <p>Installing Windows is a pretty straight forward and uncomplicated process.<br> There are however a couple tips and tricks here, so I still recomended you to read it!</p>
+        <a href="linux.html" class="button">Already installed? Go to Linux! → </a>
+        <br>
+        <hr class="rounded">
+        <br>
+        <div class="installertext">
+            <p class="bold" id="preparement">Preparement</p>
+            <p>Let's start with what you need! <br>To install Windows, you're going to need:</p>
+            <ul>
+                <li>a USB stick that is at least 8GB</li>
+                <li>a internet connection</li>
+                <li>another computer or a pre made Windows installer USB</li>
+                <li>about two hours of free time</li>
+            </ul>
+            <p>System requirements for Windows 10</p>
+            <ul>
+                <li>a 1GHz or faster CPU</li>
+                <li>1GB RAM for a 32 bit install, and 2GB RAM for a 64 bit install (or more)</li>
+                <li>a drive with 16GB storage for a 32 bit install, or 64GB storage for a 64 bit install (or more)</li>
+                <li>a graphics card with drivers signed by Microsoft</li>
+            </ul>
+            <p>System requirements for Windows 11</p>
+            <ul>
+                <li>a supported 1GHz CPU with at least two cores (or faster)</li>
+                <li>4GB RAM (or more)</li>
+                <li>a drive with 64GB storage (or more) (preferably an SSD)</li>
+                <li>a graphics card with drivers signed by Microsoft</li>
+                <li>TPM 2.0</li>
+                <li>UEFI and Secure Boot</li>
+            </ul>
+            <br>
+            <p class="bold">Creating the install media</p>
+            <p>If you already have an install medium, you can skip to "Preparing BIOS".</p>
+            <p class="bold">Method 1 - using the Microsoft Windows Media Creation Tool</p>
+            <p>Microsoft provides a tool for us to use to create an install medium for Windows 10 and 11. It is by far the easiest way to make a Windows installer and will most likely be the fastest. <br>This tool is however only compatible with Windows. If you do not have access to a Windows computer, please head to Method 2. <br>Start by searching for "Windows Media Creation tool for Windows 10/11" in your browser depending on which version you would like to install.<br>Next, plug in your USB storage device to your computer and launch the downloaded program.</p>
+            <p class="bold">Method 2 - manually creating the install medium</p>
+            <p class="bold">Method 3 - buying a pre-made install medium</p>
+        </div>
+    </main>
+    <footer>
+        <!--Och här bestämmer jag vad som finns i min footer, asså min sidfot-->
+        <p>"Windows" is a registered trademark of Microsoft Corporation - This website was created by Adnan Bukvic</p>
+    </footer>
+</body>
