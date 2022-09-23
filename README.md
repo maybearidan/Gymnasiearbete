@@ -2,7 +2,7 @@
 
 # OpenOS - ett gymnasiearbete av Adnan Bukvic
 
-OpenOS är en webbsida hostad på en vanlig laptop som innehåller guider om hur man installerar operativsystem.
+OpenOS är en webbsida hostad på en vanlig laptop med WAMPServer som innehåller guider om hur man installerar operativsystem.
 
 Projektet är ett gymnasiearbete av Adnan Bukvic och får ej kopieras utan tillåtelse.
 
