@@ -306,6 +306,10 @@ hr.rounded {
         display: block;
     }
 
+    .togglenav > a, .toggle > a, .shquick > a{
+        font-family: SofiaProBold, SofiaPro, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
     .quicknav{
         display: none;
     }   
