@@ -14,7 +14,7 @@ This is a school project by Adnan Bukvic and you are NOT allowed to copy it with
 
 -------
 
-URL: openos.se
+URL: openos.info
 
 IP:
 
