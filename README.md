@@ -1,4 +1,5 @@
 <img src="/favicon/android-chrome-512x512.png">
+
 # OpenOS - ett gymnasiearbete av Adnan Bukvic
 
 OpenOS är en webbsida som innehåller guider om hur man installerar operativsystem.
