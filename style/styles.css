@@ -98,6 +98,10 @@ body{
     font-size: 14px;
 }
 
+.togglenav > a, .toggle > a, .shquick > a{
+    font-family: SofiaProBold, SofiaPro, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 header{
     grid-area: header;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -304,10 +308,6 @@ hr.rounded {
         left: 70%;
         top: -40px;
         display: block;
-    }
-
-    .togglenav > a, .toggle > a, .shquick > a{
-        font-family: SofiaProBold, SofiaPro, -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     .quicknav{
