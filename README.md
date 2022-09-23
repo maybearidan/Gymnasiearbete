@@ -11,3 +11,8 @@ Projektet är ett gymnasiearbete av Adnan Bukvic och får ej kopieras utan till�
 OpenOS is a website hosted on a regular laptop using WAMPServer that contains guides on how to install operating systems.
 
 This is a school project by Adnan Bukvic and you are NOT allowed to copy it without permission.
+
+-------
+
+URL: openos.se
+IP:
