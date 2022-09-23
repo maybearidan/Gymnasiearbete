@@ -1,5 +1,6 @@
-# Gymnasiearbete
- 
+# OpenOS - ett gymnasiearbete av Adnan Bukvic
+
+ <img src="/favicon/android-chrome-512x512.png">
 Projektet påbörjades den 10:e september 2022.
 Du kan följa projektet här på GItHub för att få uppdateringar för projketet
 
