@@ -297,16 +297,22 @@ hr.rounded {
     }
 
     .toggle{
-        position: relative;
+        position: fixed;
         left: 5%;
-        top: -10px;
+        top: 2px;
         display: block;
     }
 
+    .logo{
+        position: fixed;
+        top: 6px;
+        right: 47%;
+    }
+
     .togglenav{
-        position: relative;
-        left: 70%;
-        top: -47px;
+        position: fixed;
+        right: 15px;
+        top: 2px;
         display: block;
     }
 
