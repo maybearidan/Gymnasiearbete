@@ -256,14 +256,14 @@ hr.rounded {
     text-decoration: none;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (width > 1024px) {
 
     #quickjumpmenuwithheader{
-        display: none;
+        display: none !important; 
     }
 
     #homemenuwithheader{
-        display: none;
+        display: none !important; 
     }
 
     .shquick{
