@@ -11,11 +11,16 @@
     <link rel="icon" type="image/x-icon" href="/favicon/android-chrome-512x512.png">
     <!--Här bestämmer jag texten som ska stå på flikraden på webbläsaren.-->
     <link href="style/styles.css" rel="stylesheet">
+    <script src="../scrpit/jumpquickheader.js"></script>
     <!--Här länkar jag HTML dokumetet med min CSS. Alla sidor använder samma css.-->
 </head>
 
 <body>
     <header>
+        <div class="mobile">
+            <button onclick="showMenu()" class="toggle">Meny</button>
+            <button onclick="showNav()" class="togglenav">Snabbhopp</button>
+        </div>
         <div class="toolbar">
             <a href="index.html">Hem</a>
             <a href="windows.html">Windows</a>
@@ -25,13 +30,42 @@
             <a href="en/windows.html" lang="en">Switch language (to English)</a>
         </div>
         <div class="quicknav">
-            <a href="windows.html">Förberedelser</a>
+            <button onclick="showNav()" class="shquick">Quick-jump</button>
+            <a href="#preparement">Förberedelser</a>
             <a href="windows.html">Skapa installationsmedia</a>
             <a href="windows.html">Förberedelser för BIOS</a>
             <a href="windows.html">Starta till mediat</a>
             <a href="windows.html">Installation</a>
             <a href="windows.html">OOBE</a>
-            <a href="windows.html">Efter installationen</a>
+            <a href="#test">Efter installationen</a>
+        </div>
+        <div id="quickjumpmenuwithheader">
+            <a href="#preparement">Förberedelser</a>
+            <br>
+            <a href="windows.html">Skapa installationsmedia</a>
+            <br>
+            <a href="windows.html">Förberedelser för BIOS</a>
+            <br>
+            <a href="windows.html">Starta till mediat</a>
+            <br>
+            <a href="windows.html">Installation</a>
+            <br>
+            <a href="windows.html">OOBE</a>
+            <br>
+            <a href="#test">Efter installationen</a>
+        </div>
+        <div id="homemenuwithheader">
+            <a href="index.html">Hem</a>
+            <br>
+            <a href="windows.html">Windows</a>
+            <br>
+            <a href="linux.html">Linux</a>
+            <br>
+            <a href="macos.html">macOS</a>
+            <br>
+            <a href="om.html">Om OpenOS</a>
+            <br>
+            <a href="en/windows.html" lang="en">Switch language (to English)</a>
         </div>
     </header>
     <main>

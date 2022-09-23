@@ -11,17 +11,36 @@
     <link rel="icon" type="image/x-icon" href="/favicon/android-chrome-512x512.png">
     <!--Här bestämmer jag texten som ska stå på flikraden på webbläsaren.-->
     <link href="../style/styles.css" rel="stylesheet">
+    <script src="../scrpit/jumpquickheader.js"></script>
     <!--Här länkar jag HTML dokumetet med min CSS. Alla sidor använder samma css.-->
 </head>
 
 <body>
-    <header class="toolbar">
-        <a href="index.html">Home</a>
-        <a href="windows.html">Windows</a>
-        <a href="linux.html">Linux</a>
-        <a href="macos.html">macOS</a>
-        <a href="about.html">About OpenOS</a>
-        <a href="../index.html" lang="sv">Byt språk (till svenska)</a>
+    <header>
+        <div class="mobile">
+            <button onclick="showMenu()" class="toggle">Menu</button>
+        </div>
+        <div class="toolbar">
+            <a href="index.html">Home</a>
+            <a href="windows.html">Windows</a>
+            <a href="linux.html">Linux</a>
+            <a href="macos.html">macOS</a>
+            <a href="about.html">About OpenOS</a>
+            <a href="../windows.html" lang="sv">Byt språk (till svenska)</a>
+        </div>
+        <div id="homemenuwithheader">
+            <a href="index.html">Home</a>
+            <br>
+            <a href="windows.html">Windows</a>
+            <br>
+            <a href="linux.html">Linux</a>
+            <br>
+            <a href="macos.html">macOS</a>
+            <br>
+            <a href="about.html">About OpenOS</a>
+            <br>
+            <a href="../index.html" lang="sv">Byt språk (till svenska)</a>
+        </div>
     </header>
     <main>
         <br>
