@@ -1,17 +1,21 @@
 function showNav() {
-    var x = document.getElementById("quickjumpmenuwithheader");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+  var meny = document.getElementById("homemenuwithheader");
+  var nav = document.getElementById("quickjumpmenuwithheader");
+    if (nav.style.display === "block") {
+      nav.style.display = "none";
     } else {
-      x.style.display = "block";
+      nav.style.display = "block";
+      meny.style.display = "none";
     }
 }
 
 function showMenu() {
-    var x = document.getElementById("homemenuwithheader");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+    var meny = document.getElementById("homemenuwithheader");
+    var nav = document.getElementById("quickjumpmenuwithheader");
+    if (meny.style.display === "block") {
+      meny.style.display = "none";
     } else {
-      x.style.display = "block";
+      meny.style.display = "block";
+      nav.style.display = "none";
     }
 }
