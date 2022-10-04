@@ -5,6 +5,7 @@ function showNav() {
       nav.style.display = "none";
     } else {
       nav.style.display = "block";
+      if(meny)
       meny.style.display = "none";
     }
 }
@@ -16,6 +17,7 @@ function showMenu() {
       meny.style.display = "none";
     } else {
       meny.style.display = "block";
-      nav.style.display = "none";
+      if(nav)
+        nav.style.display = "none";
     }
 }
