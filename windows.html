@@ -21,8 +21,8 @@
     <header>
         <nav class="mobile">
             <button onclick="showMenu()" class="toggle">☰ Meny</button>
-            <img src="favicon/favicon-32x32.png" class="logo">
-            <button onclick="showNav()" class="togglenav">Snabbhopp</button>
+            <img alt="OpenOS Logo" src="favicon/favicon-32x32.png" class="logo">
+            <button onclick="showNav()" class="togglenav">► Snabbhopp</button>
         </nav>
         <nav class="toolbar">
             <a href="index.html">Hem</a>
@@ -33,7 +33,7 @@
             <a href="en/windows.html" lang="en">Switch language (to English)</a>
         </nav>
         <nav class="quicknav">
-            <button onclick="showNav()" class="shquick">Snabbhopp</button>
+            <button onclick="showNav()" class="shquick">► Snabbhopp</button>
             <a href="#preparement">Förberedelser</a>
             <a href="windows.html">Skapa installationsmedia</a>
             <a href="windows.html">Förberedelser för BIOS</a>
@@ -43,10 +43,10 @@
             <a href="#test">Efter installationen</a>
         </nav>
         <nav id="quickjumpmenuwithheader">
-            <a href="#preparement">Förberedelser</a>
+            <a href="#pre">Förberedelser</a>
             <br>
             <br>
-            <a href="windows.html">Skapa installationsmedia</a>
+            <a href=#media>Skapa installationsmedia</a>
             <br>
             <br>
             <a href="windows.html">Förberedelser för BIOS</a>
@@ -91,37 +91,42 @@
         <hr class="rounded">
         <br>
         <div class="installertext">
-            <p class="bold" id="preparement">Förberedelser</p>
-            <p>Vi börjar med vad du behöver! <br>För att installera Windows måste du ha:</p>
-            <ul>
-                <li>ett USB minne som åt minstånde är 8GB</li>
-                <li>en nätverksanslutning</li>
-                <li>en annan dator eller ett färdig USB minne med Windows</li>
-                <li>ungefär två timmar</li>
-            </ul>
-            <p>Systemkrav för Windows 10</p>
-            <ul>
-                <li>en 1GHz eller snabbare CPU</li>
-                <li>1GB RAM för 32 bit, eller 2GB RAM för 64 bit (eller mer)</li>
-                <li>16GB lagring för 32 bit eller 64GB lagring för 64 bit (eller mer)</li>
-                <li>ett grafikkort med drivrutiner som har signerats av Microsoft</li>
-            </ul>
-            <p>Systemkrav för Windows 11</p>
-            <ul>
-                <li>en 1GHz CPU som stöds med åt minestånde två kärnor (eller snabbare)</li>
-                <li>4GB RAM (eller mer))</li>
-                <li>64GB lagring (eller mer) (helst en SSD)</li>
-                <li>ett grafikkort med drivrutiner som har signerats av Microsoft</li>
-                <li>TPM 2.0</li>
-                <li>UEFI och Secure Boot</li>
-            </ul>
+            <section id="pre">
+                <p class="bold">Förberedelser</p>
+                <p>Vi börjar med vad du behöver! <br>För att installera Windows måste du ha:</p>
+                <ul>
+                    <li>ett USB minne som åt minstånde är 8GB</li>
+                    <li>en nätverksanslutning</li>
+                    <li>en annan dator eller ett färdig USB minne med Windows</li>
+                    <li>ungefär två timmar</li>
+                </ul>
+                <p>Systemkrav för Windows 10</p>
+                <ul>
+                    <li>en 1GHz eller snabbare CPU</li>
+                    <li>1GB RAM för 32 bit, eller 2GB RAM för 64 bit (eller mer)</li>
+                    <li>16GB lagring för 32 bit eller 64GB lagring för 64 bit (eller mer)</li>
+                    <li>ett grafikkort med drivrutiner som har signerats av Microsoft</li>
+                </ul>
+                <p>Systemkrav för Windows 11</p>
+                <ul>
+                    <li>en 1GHz CPU som stöds med åt minestånde två kärnor (eller snabbare)</li>
+                    <li>4GB RAM (eller mer))</li>
+                    <li>64GB lagring (eller mer) (helst en SSD)</li>
+                    <li>ett grafikkort med drivrutiner som har signerats av Microsoft</li>
+                    <li>TPM 2.0</li>
+                    <li>UEFI och Secure Boot</li>
+                </ul>
+            </section>
             <br>
-            <p class="bold">Skapa installationsmedia</p>
-            <p>Om du redan har installationsmedia för Windows kan du hoppa över till "Förbereder BIOS".</p>
-            <p class="bold">Metod 1 - använda Microsoft Windows Media Creation Tool</p>
-            <p>Microsoft har ett verktyg man kan använda för att skapa ett installationsmedium. Det är det absolut lättaste sättet att göra det på, och är nog snabbast.<br>Detta verktyg är dock endast kompatibelt med Windows. Om du inte har tillgång till en Windows dator kan du gå till Metod 2 istället. <br>Börja med att söka efter "Microsoft Windows Media Creatio Tool for Windows 10/11" beronde på vilken verison du vill köra.<br>Sedan kopplar du in USB minnet du vill använda och kör programmet du ladade ned.</p>
-            <p class="bold">Metod 2 - skapa installationsmedia manuellt</p>
-            <p class="bold">Metod 3 - köpa ett installationsmedia</p>
+            <section id="media">
+                <p class="bold">Skapa installationsmedia</p>
+                <p>Om du redan har installationsmedia för Windows kan du hoppa över till "Förbereder BIOS".</p>
+                <p class="bold">Metod 1 - använda Microsoft Windows Media Creation Tool</p>
+                <p>Microsoft har ett verktyg man kan använda för att skapa ett installationsmedium. Det är det absolut lättaste sättet att göra det på, och är nog snabbast.<br>Detta verktyg är dock endast kompatibelt med Windows. Om du inte har tillgång till en Windows dator kan du gå till Metod 2 istället.</p>
+                <p>    1. Börja med att gå till Windows Media Creation Tool för <a class="link" href="https://www.microsoft.com/sv-se/software-download/windows10">Windows 10</a> eller <a class="link" href="https://www.microsoft.com/sv-se/software-download/windows11">Windows 11</a> beronde på vilken verison du vill köra. Ladda ned verktyget och starta det.<br><br>2. Sedan kopplar du in USB minnet du vill använda och kör programmet du ladade ned.</p>
+                <p class="bold">Metod 2 - skapa installationsmedia manuellt</p>
+                <p class="bold">Metod 3 - köpa ett installationsmedia</p>
+            </section>
         </div>
     </main>
     <footer>
