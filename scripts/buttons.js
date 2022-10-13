@@ -6,7 +6,7 @@ function showNav() {
     } else {
       nav.style.display = "block";
       if(meny)
-      meny.style.display = "none";
+        meny.style.display = "none";
     }
 }
 
@@ -20,4 +20,11 @@ function showMenu() {
       if(nav)
         nav.style.display = "none";
     }
+}
+
+function macosUnhide() {
+  var text = document.getElementById("mactext");
+  var notice = document.getElementById("alert");
+    text.style.display = "block";
+    notice.style.display = "none";
 }

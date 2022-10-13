@@ -7,33 +7,154 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>macOS - OpenOS</title>
+    <title>macOS - OpenOS (SE)</title>
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <link rel="icon" type="image/png" href="/favicon/android-chrome-192x192.png" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <!--Här bestämmer jag texten som ska stå på flikraden på webbläsaren.-->
     <link href="style/styles.css" rel="stylesheet">
+    <script src="scripts/buttons.js"></script>
     <!--Här länkar jag HTML dokumetet med min CSS. Alla sidor använder samma css.-->
 </head>
 
-<body class="installerbody">
-    <header class="toolbar">
-        <a href="/">Hem</a>
-        <a href="windows.html">Windows</a>
-        <a href="linux.html">Linux</a>
-        <a href="macos.html">macOS</a>
-        <a href="om.html">Om OpenOS</a>
+<body>
+    <header>
+        <nav class="mobile">
+            <button onclick="showMenu()" class="toggle">☰ Meny</button>
+            <img alt="OpenOS Logo" src="favicon/favicon-32x32.png" class="logo">
+            <button onclick="showNav()" class="togglenav">► Snabbhopp</button>
+        </nav>
+        <nav class="toolbar">
+            <a href="/">Hem</a>
+            <a href="windows.html">Windows</a>
+            <a href="linux.html">Linux</a>
+            <a href="macos.html">macOS</a>
+            <a href="om.html">Om OpenOS</a>
+            <a href="en/linxu.html" lang="en">Switch language (to English)</a>
+        </nav>
+        <nav class="quicknav">
+            <button onclick="showNav()" class="shquick">► Snabbhopp</button>
+            <a href="#preparement">Förberedelser</a>
+            <a href="windows.html">Skapa installationsmedia</a>
+            <a href="windows.html">Förberedelser för BIOS</a>
+            <a href="windows.html">Starta till mediat</a>
+            <a href="windows.html">Installation</a>
+            <a href="windows.html">OOBE</a>
+            <a href="#test">Efter installationen</a>
+        </nav>
+        <nav id="quickjumpmenuwithheader">
+            <a href="#pre">Förberedelser</a>
+            <br>
+            <br>
+            <a href=#media>Skapa installationsmedia</a>
+            <br>
+            <br>
+            <a href="windows.html">Förberedelser för BIOS</a>
+            <br>
+            <br>
+            <a href="windows.html">Starta till mediat</a>
+            <br>
+            <br>
+            <a href="windows.html">Installation</a>
+            <br>
+            <br>
+            <a href="windows.html">OOBE</a>
+            <br>
+            <br>
+            <a href="#test">Efter installationen</a>
+        </nav>
+        <nav id="homemenuwithheader">
+            <a href="/">Hem</a>
+            <br>
+            <br>
+            <a href="windows.html">Windows</a>
+            <br>
+            <br>
+            <a href="linux.html">Linux</a>
+            <br>
+            <br>
+            <a href="macos.html">macOS</a>
+            <br>
+            <br>
+            <a href="om.html">Om OpenOS</a>
+            <br>
+            <br>
+            <a href="en/windows.html" lang="en">Switch language (to English)</a>
+        </nav>
     </header>
-    <aside>
-        <p>hej</p>
-    </aside>
     <main>
         <br>
-        <h1>Välkommen till OpenOS!</h1>
-        <p>Den här webbsidan innehåller guider som visar hur man kan installera Windows, Linux och macOS på en och samma dator.<br>Det är rekomenderat att du använder en egenbyggd dator.</p>
+        <h1>Det svåra tar vi till sist, macOS!</h1>
+        <p>Att installera macOS på icke-Apple hårdvara är inte lätt. Om du inte känner till din hårdvara råder jag dig att inte fortsätta.</p>
+        <div id="alert">
+            Att installera macOS på icke-Apple hårdvara är emot Apples Tjänstvilkor.<br>Genom att klicka på "Jag förstår" går du med på att denna sidan och dess ägare inte kommer förbli skyldiga ifall din hårdvara skadas eller om något annat sker.
+            <br>
+            <button onclick="macosUnhide()" class="agree">Jag förstår</button>
+        </div>
+        <br>
+        <hr class="rounded">
+        <br>
+        <div id="mactext">
+            <section id="pre" class="installertext">
+                <p class="bold">Förberedelser</p>
+                <p>Vi börjar med vad du behöver! <br>För att installera Windows måste du ha:</p>
+                <ul>
+                    <li>ett USB minne som åt minstånde är 8GB</li>
+                    <li>en nätverksanslutning</li>
+                    <li>en annan dator eller ett färdig USB minne med Windows</li>
+                    <li>ungefär två timmar</li>
+                </ul>
+                <p>Systemkrav för Windows 10</p>
+                <ul>
+                    <li>en 1GHz eller snabbare CPU</li>
+                    <li>1GB RAM för 32 bit, eller 2GB RAM för 64 bit (eller mer)</li>
+                    <li>16GB lagring för 32 bit eller 64GB lagring för 64 bit (eller mer)</li>
+                    <li>ett grafikkort med drivrutiner som har signerats av Microsoft</li>
+                </ul>
+                <p>Systemkrav för Windows 11</p>
+                <ul>
+                    <li>en 1GHz CPU som stöds med åt minestånde två kärnor (eller snabbare)</li>
+                    <li>4GB RAM (eller mer)</li>
+                    <li>64GB lagring (eller mer) (helst en SSD)</li>
+                    <li>ett grafikkort med drivrutiner som har signerats av Microsoft</li>
+                    <li>TPM 2.0</li>
+                    <li>UEFI och Secure Boot</li>
+                </ul>
+            </section>
+            <br>
+            <section id="media" class="installertexts">
+                <p class="bold">Skapa installationsmedia</p>
+                <p>Om du redan har installationsmedia för Windows kan du hoppa över till "Förberedelser för BIOS".</p>
+                <p class="bold">Metod 1 - använda Microsoft Windows Media Creation Tool</p>
+                <p>Microsoft har ett verktyg man kan använda för att skapa ett installationsmedium. Det är det absolut
+                    lättaste sättet att göra det på, och är nog snabbast.<br>Detta verktyg är dock endast kompatibelt med
+                    Windows. Om du inte har tillgång till en Windows dator kan du gå till Metod 2 istället.</p>
+                <p>1. Börja med att gå till Windows Media Creation Tool för <a class="link"
+                        href="https://www.microsoft.com/sv-se/software-download/windows10">Windows 10</a> eller <a
+                        class="link" href="https://www.microsoft.com/sv-se/software-download/windows11">Windows 11</a>
+                    beroende på vilken version du vill ha. Ladda ner verktyget men öppna det inte än. <br><br>2. Nu kopplar
+                    du in USB minnet du vill använda och kör programmet du laddade ned. <br><br> 3. Acceptera avtalet och
+                    när programmet frågar dig vad du vill göra ska du klicka på "Skapa installationsmedia". Sedan får du
+                    välja språk och liknande. De förvalda inställningarna bör vara okej för de flesta, men om du till
+                    exempel vill ha Windows på kroatiska eller engelska måste du bocka av "Använd de rekommenderade
+                    inställningarna för den här datorn". Om du har en dator som endast stödjer 32- bitars operativsystem
+                    behöver du byta arkitekturen, men i 99% av fallen behöver du inte göra det. <br><br> 4. Efter du har
+                    ställt in allt som du vill ha det kommer programmet fråga dig på vad du vill skapa installationen på -
+                    ett USB minne eller en DVD skiva. Vi klickar in oss på USB minne och väljer sedan vilket USB minne vi
+                    vill använda. <br><br>5. Nu så klickar vi igenom programmet och låter det ta hand om resten. Inom 1
+                    timme bör programmet ha laddat ned och skapa installationsmediet åt oss. <br><br>6. Koppla ut USB
+                    minnet och hoppa ned till "Förberedelser för BIOS".</p>
+                <p class="bold">Metod 2 - skapa installationsmedia manuellt</p>
+                <p>Men vad händer om datorn du använder för att skapa USB minnet inte har Windows installerat? Jo, då blir
+                    det lite svårare, men det bör vi kunna göra. Vi utgår att du har antingen macOS eller Linux redan på
+                    datorn. Chrome OS och mobiltelefoner stödjer inte programmen vi använder dock, så om du inte har
+                    tillgång till Linux eller macOS får du gå till Metod 3.</p>
+                <p class="bold">Metod 3 - köpa ett installationsmedia</p>
+            </section>
+        </div>
     </main>
     <footer>
         <!--Och här bestämmer jag vad som finns i min footer, asså min sidfot-->
-        <p> Den här sidan skapades av Adnan Bukvic</p>
+        <p>"Windows" är ett registerat varumärke av Microsoft Corporation - Den här sidan skapades av Adnan Bukvic</p>
     </footer>
 </body>
