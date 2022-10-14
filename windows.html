@@ -95,7 +95,7 @@
             <p class="bold">Förberedelser</p>
             <p>Vi börjar med vad du behöver! <br>För att installera Windows måste du ha:</p>
             <ul>
-                <li>ett USB minne som åt minstånde är 8GB</li>
+                <li>ett USB minne som åtminstone är 8GB</li>
                 <li>en nätverksanslutning</li>
                 <li>en annan dator eller ett färdig USB minne med Windows</li>
                 <li>ungefär två timmar</li>
@@ -145,6 +145,13 @@
                 det lite svårare, men det bör vi kunna göra. Vi utgår att du har antingen macOS eller Linux redan på
                 datorn. Chrome OS och mobiltelefoner stödjer inte programmen vi använder dock, så om du inte har
                 tillgång till Linux eller macOS får du gå till Metod 3.</p>
+                <p>1. Börja med att leta upp en ISO fil för Windows 10 eller 11. Dessa finns att hitta antigen på Microsofts sida om du använder Linux eller macOS, eller om du bara söker upp filen på Google eller likannde. När du laddar ner filen utanför Microsofts sida bör du säkerställa dig att filen inte har modiferats. <br><br>2. Nu behöver vi ta reda på vilket operativsystem du har på datorn som skapar USB minnet. I bästa fall ska du ha Linux, men macOS bör funka det med. Om du kör Linux behöver du programmet Ventoy och på macOS använder du det medöljande verktyget Boot Camp.</p>
+                <p class="bold">Ventoy</p>
+                <p>Ventoy är ett verktyg som skapar sin egna starthanterare som ofta fungerar med Windows. Jämfört med att använda andra verktyg som Balena Etcher så funkar Ventoy med Windows mycket bättre.</p>
+                <p>1. <a class= "link" href="https://github.com/ventoy/Ventoy/releases">Ladda ned Ventoy </a></p>
+                <p class="bold">Boot Camp</p>
+                <p>På Mac- datorer med en Intel CPU är det enklare då dessa Mac datorer har stöd för att kunna installera Windows på dem och därmed har verktyg som låter dig skapa installationsmedium för Windows. Dessa verktyg har jag dock ej testat ifall de fungerar med en Windows- dator.</p>
+                <p>1. Koppla in USB minnet och starta programmet "Boot Camp Assistant". <br><br>2. Klicka på fortsätt och välj sedan "Skapa ett installationsmedium för Windows 10 eller senare" och välj sedan din ISO fil och ditt USB minne. Boot Camp kommer nu skapa minnet åt dig.</p>
             <p class="bold">Metod 3 - köpa ett installationsmedia</p>
         </section>
     </main>
