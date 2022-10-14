@@ -296,6 +296,13 @@ hr.rounded {
     display: none;
 }
 
+.code{
+    font-family: monospace;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    padding: 12px;
+}
+
 @media screen and (width > 1024px) {
 
     #quickjumpmenuwithheader{
@@ -312,7 +319,7 @@ hr.rounded {
 }
 
 @media screen and (max-width: 1024px) {
-    
+
     .quicknav > a{
         display: none;
     }  
