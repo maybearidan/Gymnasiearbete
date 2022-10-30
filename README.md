@@ -16,6 +16,6 @@ This is a school project by Adnan Bukvic and you are NOT allowed to copy it with
 
 URL: openos.info (not registered at the moment)
 
-IP: http://85.195.33.3/
+IP: http://178.249.148.100/
 
 Google Docs: https://docs.google.com/document/d/1lxht3D1xBZpSXV63oMqVuBqOEW1MxEIt-BrPYq8UXq8
