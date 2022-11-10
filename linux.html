@@ -29,16 +29,16 @@
             <a href="index.html">Hem</a>
             <a href="windows.html">Windows</a>
             <a href="linux.html">Linux</a>
-            <a href="macos.html">macOS</a>
+            <a href="/macos/main.html">macOS</a>
             <a href="om.html">Om OpenOS</a>
-            <a href="en/linxu.html" lang="en">Switch language (to English)</a>
+            <a href="en/windows.html" lang="en">Switch language (to English)</a>
         </nav>
         <nav class="quicknav">
             <button onclick="showNav()" class="shquick">► Snabbhopp</button>
-            <a href="#preparement">Förberedelser</a>
-            <a href="windows.html">Skapa installationsmedia</a>
-            <a href="windows.html">Förberedelser för BIOS</a>
-            <a href="windows.html">Starta till mediat</a>
+            <a href="#pre">Förberedelser</a>
+            <a href="#media">Skapa installationsmedia</a>
+            <a href="#bios">Förberedelser för BIOS</a>
+            <a href="#start">Starta till mediat</a>
             <a href="windows.html">Installation</a>
             <a href="windows.html">OOBE</a>
             <a href="#test">Efter installationen</a>
@@ -50,10 +50,10 @@
             <a href=#media>Skapa installationsmedia</a>
             <br>
             <br>
-            <a href="windows.html">Förberedelser för BIOS</a>
+            <a href="#bios">Förberedelser för BIOS</a>
             <br>
             <br>
-            <a href="windows.html">Starta till mediat</a>
+            <a href="#start">Starta till mediat</a>
             <br>
             <br>
             <a href="windows.html">Installation</a>
@@ -74,7 +74,7 @@
             <a href="linux.html">Linux</a>
             <br>
             <br>
-            <a href="macos.html">macOS</a>
+            <a href="/macos/main.html">macOS</a>
             <br>
             <br>
             <a href="om.html">Om OpenOS</a>
@@ -85,9 +85,10 @@
     </header>
     <main>
         <br>
-        <h1>Nu är det dags för Linux!</h1>
-        <p>Linux är lite mer komplicerat då det kräver mer kunskaper inom datorer, men det är absolut inte lika svårt som macOS.</p>
-        <a href="macos.html" class="button">Redan installerat? Gå till macOS! → </a>
+        <h1>Nu tar vi oss ann Linux!</h1>
+        <p>Linux är lite svårare, men det är fortfarande ganska enkelt. Jag kommer hjälpa dig igenom allt du någonsin kommer behöva så det är bara att ta det lungt!</p>
+        <a href="linux.html" class="button">Redan installerat? Gå till Linux! → </a>
+        <br>
         <br>
         <hr class="rounded">
         <br>
@@ -95,7 +96,7 @@
             <p class="bold">Förberedelser</p>
             <p>Vi börjar med vad du behöver! <br>För att installera Windows måste du ha:</p>
             <ul>
-                <li>ett USB minne som åt minstånde är 8GB</li>
+                <li>ett USB minne som åtminstone är 8GB</li>
                 <li>en nätverksanslutning</li>
                 <li>en annan dator eller ett färdig USB minne med Windows</li>
                 <li>ungefär två timmar</li>
@@ -145,7 +146,56 @@
                 det lite svårare, men det bör vi kunna göra. Vi utgår att du har antingen macOS eller Linux redan på
                 datorn. Chrome OS och mobiltelefoner stödjer inte programmen vi använder dock, så om du inte har
                 tillgång till Linux eller macOS får du gå till Metod 3.</p>
+            <p>1. Börja med att leta upp en ISO fil för Windows 10 eller 11. Dessa finns att hitta antigen på Microsofts
+                sida om du använder Linux eller macOS, eller om du bara söker upp filen på Google eller likannde. När du
+                laddar ner filen utanför Microsofts sida bör du säkerställa dig att filen inte har modiferats.
+                <br><br>2. Nu behöver vi ta reda på vilket operativsystem du har på datorn som skapar USB minnet. I
+                bästa fall ska du ha Linux, men macOS bör funka det med. Om du kör Linux behöver du programmet Ventoy
+                och på macOS använder du det medöljande verktyget Boot Camp.
+            </p>
+            <p class="bold">Ventoy</p>
+            <p>Ventoy är ett verktyg som skapar sin egna starthanterare som ofta fungerar med Windows. Jämfört med att
+                använda andra verktyg som Balena Etcher så funkar Ventoy med Windows mycket bättre.</p>
+            <p>1. Koppla in USB minnet och <a class="link" href="https://github.com/ventoy/Ventoy/releases">ladda ned
+                    Ventoy</a> från dess GitHub sida. Du behöver .tar.gz filen då den är för Linux. <br><br>2. När du
+                har laddat ned filen behöver du packa upp den och sedan öppna mappen som den har packats upp till.
+                Högerklicka på ett tomt utrymme och klicka på "Öppna Terminal här". I terminalen skriver du kommandot
+                som finns nedan. Den kommer att köra VentoyWeb.sh. SH är en skriptfil likt .bat i Windows. </p>
+            <p class="code">sudo ./VentoyWeb.sh</p>
+            <p>3. Skriptet bör har startat Ventoy Web. I terminalrutan bör du se en lokal IP address (en rad med
+                siffror, ofta 127.0.0.1). Skriv in dem i din webbläsare och tryck på Enter.<br><br>4. I och med att vi
+                nog kommer installera detta på UEFI hårdvara behöver vi gå till "Option" -> "Partition Style" och välja
+                GPT istället för MBR. Sedan väljer vi vårt USB minne och klickar på "Install". Detta kommer installera
+                Ventoy på USB minnet.<br><br>5. När installationen är klar bör det finnas två partitioner på USB minnet
+                - "VENTOYEFI" och "Ventoy". Vi ska inte röra EFI biten, utan endast Ventoy. Kopiera hela ISO filen till
+                den mappen.<br><br>6. Koppla ut USB minnet när kopieringen är klar GENOM ATT FÖRST MATA UT DEN.</p>
+            <p class="bold">Boot Camp</p>
+            <p>På Mac- datorer med en Intel CPU är det enklare då dessa Mac datorer har stöd för att kunna installera
+                Windows på dem och därmed har verktyg som låter dig skapa installationsmedium för Windows. Dessa verktyg
+                har jag dock ej testat ifall de fungerar med en Windows- dator.</p>
+            <p>1. Koppla in USB minnet och starta programmet "Boot Camp Assistant". <br><br>2. Klicka på fortsätt och
+                välj sedan "Skapa ett installationsmedium för Windows 10 eller senare" och välj sedan din ISO fil och
+                ditt USB minne. Boot Camp kommer nu skapa minnet åt dig. <br><br>3. Koppla ut minnet när det är klart.
+            </p>
             <p class="bold">Metod 3 - köpa ett installationsmedia</p>
+            <p>I värsta fall om du inte kan skapa ditt enga installationsmedium så kan du köpa ett minne. Det finns dock
+                några fördelar med dessa, USB minnet kan du förmatera hur du vill och dessa har även en nyckel till
+                Windows med. Windows Pro kostar mer än vad Home gör dock.</p>
+            <p>Du kan köpa dessa minnen på Komplett, Inet eller liknande butiker.</p>
+        </section>
+        <br>
+        <section id="bios" class="installertext">
+            <p class="bold">Förberedelser för BIOS</p>
+            <p>Om du installerar Windows 10 behöver du nog inte göra något här, så du kan hoppa ned direkt till "Starta
+                till minnet". Om du vill köra Windows 11 dock behöver du ändra lite i ditt BIOS.</p>
+            <p>När nan kör Windows 11 måste man ha TPM 2.0, Secure Boot och UEFI. Detta aktiveras i ditt BIOS. BIOS'en
+                skiljer sig åt från märkte till märke, men även modell till modell. Sök upp modellen du har, samt de
+                olika inställningarna du behöver ändra. I de flesta fallen bör de finnas i säkerhetsfliken dock.</p>
+        </section>
+        <br>
+        <section id="start" class="installertext">
+            <p class="bold">Starta till mediat</p>
+   
         </section>
     </main>
     <footer>

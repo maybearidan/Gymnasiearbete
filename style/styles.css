@@ -234,8 +234,10 @@ footer > p{
 }
 
 hr.rounded {
-    border-top: 3px solid #303030;
+    border-top: 3px dashed #303030;
     border-bottom: 3px #303030;
+    border-left: none;
+    border-right: none;
     border-radius: 5px;
     width: 80vw;
 }
@@ -267,7 +269,7 @@ hr.rounded {
     background-color: #f44336; /* Red */
     color: white;
     margin-bottom: 15px;
-    margin: 20px;
+    margin: 40px;
     border-radius: 20px;
 }
 
@@ -314,6 +316,16 @@ hr.rounded {
 
     .shquick{
         display: none !important;
+    }
+
+    #alert {
+        position: relative;
+        left: 50%;
+        transform: translateX(-55%);
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        max-height: -moz-fit-content;
+        max-height: fit-content;
     }
 }
 
