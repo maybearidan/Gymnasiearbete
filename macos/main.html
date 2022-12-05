@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <!--Här bestämmer jag texten som ska stå på flikraden på webbläsaren.-->
     <link href="../style/styles.css" rel="stylesheet">
-    <script src="../scripts/buttons.js"></script>
+    <script src="../scripts/buttons.js" defer></script>
     <!--Här länkar jag HTML dokumetet med min CSS. Alla sidor använder samma css.-->
 </head>
 
@@ -91,7 +91,7 @@
             Att installera macOS på icke-Apple hårdvara är emot Apples Tjänstvilkor.<br>Genom att klicka på "Jag förstår" går du med på att denna sidan och dess ägare inte kommer förbli skyldiga ifall din hårdvara skadas eller om något annat sker.
             <br>
             <br>
-            <button onclick="macosUnhide()" class="agree">Jag förstår</button>
+            <button onclick="macosUnhide(1)" class="agree">Jag förstår</button>
         </div>
         <br>
         <hr class="rounded">
