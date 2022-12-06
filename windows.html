@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#191919" />
+    <meta name="theme-color" content="#151515" />
     <title>Windows - OpenOS (SE)</title>
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <link rel="icon" type="image/png" href="/favicon/android-chrome-192x192.png" sizes="192x192">
@@ -124,10 +124,19 @@
             <p>Microsoft har ett verktyg man kan använda för att skapa ett installationsmedium. Det är det absolut
                 lättaste sättet att göra det på, och är nog snabbast.<br>Detta verktyg är dock endast kompatibelt med
                 Windows. Om du inte har tillgång till en Windows dator kan du gå till Metod 2 istället.</p>
-            <p>1. Börja med att gå till Windows Media Creation Tool för <a class="link"
-                    href="https://www.microsoft.com/sv-se/software-download/windows10">Windows 10</a> eller <a
-                    class="link" href="https://www.microsoft.com/sv-se/software-download/windows11">Windows 11</a>
-                beroende på vilken version du vill ha. Ladda ner verktyget men öppna det inte än. <br><br>2. Nu kopplar
+            <p>1. Börja med att gå till Windows Media Creation Tool för Windows 10 eller Windows 11
+                beroende på vilken version du vill ha. Ladda ner verktyget men öppna det inte än. </p>
+                <br>
+                <button class="downwin10" onclick="window.open('https://www.microsoft.com/sv-se/software-download/windows10')"">
+                    <i class=" fa fa-download"></i> Ladda ned Windows 10 Media Creation tool (öppnas
+                    i en ny flik)
+                </button>
+                <button class="downwin11" onclick="window.open('https://www.microsoft.com/sv-se/software-download/windows11')"">
+                    <i class=" fa fa-download"></i> Ladda ned Windows 11 Media Creation tool (öppnas
+                    i en ny flik)
+                </button>
+                <br>
+                <p>2. Nu kopplar
                 du in USB minnet du vill använda och kör programmet du laddade ned. <br><br> 3. Acceptera avtalet och
                 när programmet frågar dig vad du vill göra ska du klicka på "Skapa installationsmedia". Sedan får du
                 välja språk och liknande. De förvalda inställningarna bör vara okej för de flesta, men om du till
@@ -155,7 +164,14 @@
             <p>Ventoy är ett verktyg som skapar sin egna starthanterare som ofta fungerar med Windows. Jämfört med att
                 använda andra verktyg som Balena Etcher så funkar Ventoy med Windows mycket bättre.</p>
             <p>1. Koppla in USB minnet och <a class="link" href="https://github.com/ventoy/Ventoy/releases">ladda ned
-                    Ventoy</a> från dess GitHub sida. Du behöver .tar.gz filen då den är för Linux. <br><br>2. När du
+                    Ventoy</a> från dess GitHub sida. Du behöver .tar.gz filen då den är för Linux.</p>
+                    <br>
+                    <button class="downld" onclick="window.open('https://github.com/ventoy/Ventoy/releases')"">
+                        <i class=" fa fa-download"></i> Ladda ned Ventoy från GitHub (öppnas
+                        i en ny flik)
+                    </button>
+                    <br>
+                    <p>2. När du
                 har laddat ned filen behöver du packa upp den och sedan öppna mappen som den har packats upp till.
                 Högerklicka på ett tomt utrymme och klicka på "Öppna Terminal här". I terminalen skriver du kommandot
                 som finns nedan. Den kommer att köra VentoyWeb.sh. SH är en skriptfil likt .bat i Windows. </p>
@@ -227,7 +243,7 @@
                 utrymme" och klicka på nästa. <br><br> 4. Windows installeras nu till din hårddisk. Detta kan ta en
                 ganska lång tid, så vänta. Om datorn startar igen till USB minnet efter installationen så behöver du
                 koppla ut minnet och starta om
-                datorn. 5. Efter installationen så behöver du välja dina inställningar och skapa ett konto. Om du vill
+                datorn. <br><br>5. Efter installationen så behöver du välja dina inställningar och skapa ett konto. Om du vill
                 anväda ett
                 lokalt konto istället för ett Microsoft konto så behöver du koppla ut din nätverks kabel och sedan
                 klicka på "Jag har inte internet" och sedan välja "Fortsätt med begränsad upplevelse". Dessutom kan det
@@ -236,11 +252,12 @@
                 Windows Update. Låt den installera alla uppdateringar och alla drivrutiner som den tycker ska
                 installeras. Vi kommer anvädna ett program som installerar nya drivrutiner åt oss. Programmet heter SDIO
                 (Snappy Driver Installer Origin). Ladda ned programmet men starta inte det föränn alla uppdateringar har
-                installerats och det ståt "Du är uppdaterad" när du letar efter uppdateringar.
-            <div class="downld" onclick="window.open('https://www.glenn.delahoy.com/snappy-driver-installer-origin/')"">
+                installerats och det ståt "Du är uppdaterad" när du letar efter uppdateringar.</p>
+                <br>
+            <button class="downld" onclick="window.open('https://www.glenn.delahoy.com/snappy-driver-installer-origin/')"">
                 <i class=" fa fa-download"></i> Ladda ned Snappy Driver Installer Origin från Glenn's Page (öppnas
                 i en ny flik, sidan kan vara långsam)
-            </div>
+            </button>
         </section>
         <br><br>
         <section id="efterinstall" class="installertext">
@@ -257,17 +274,22 @@
         </section>
         <br>
         <br>
-        <span><hr class="rounded"></span>
-        <br>
-        <p>Bra jobbat! Du har nu en fungerande Windows installation! Det var väl inte så svårt väl?</p>
-        <p>Vi kan nu fortsätta med Linux om du skulle vilja det, men om du känner dig nöjd med bara Windows så är det
-            okej med!</p>
-        <a href="linux.html" class="button">Gå till Linux! → </a>
-        <br>
-        <br>
     </main>
     <footer>
+        <br>
+        <br>
+        <hr class="rounded">
+        <br>
+        <div class="done">
+            <p>Bra jobbat! Du har nu en fungerande Windows installation! Det var väl inte så svårt väl?</p>
+            <p>Vi kan nu fortsätta med Linux om du skulle vilja det, men om du känner dig nöjd med bara Windows så är
+                det
+                okej med!</p>
+            <a href="linux.html" class="button">Gå till Linux! → </a>
+        </div>
         <!--Och här bestämmer jag vad som finns i min footer, asså min sidfot-->
-        <p>"Windows" är ett registerat varumärke av Microsoft Corporation - Den här sidan skapades av Adnan Bukvic</p>
+        <p>"Windows", "Windows Update" och "Microsoft Account" är ett registrerade varumärken av Microsoft Corporation. Ventoy och Snappy Driver Installer Origin
+            (SDIO) är programvara med öppen källkod. Typsnittet som används är gratis och heter Jost. <br><br> OpenOS är en webbsida som visar dig hur man installerar Windows, Linux och macOS på en dator och är gjort av Adnan Bukvic helt i utbildningssyfte som ett gymnasiearbete. Sidan är inte skyddad av någon uppehovsrättslag. Kopiera ej sidan utan tillåtelse.</p>
+        <p><a class="mail" href="om.html">Kontakta ägaren</a> om ditt varumärke påverkas för att ändra eller ta bort innehåll, alternativt om du tycker att något bör ändras som privatperson.</p>
     </footer>
 </body>

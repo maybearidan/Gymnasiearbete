@@ -16,7 +16,6 @@ html{
 
 body{
     font-family: Jost, -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: rgb(248, 248, 248);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -50,7 +49,7 @@ body{
 
 .mobile{
     grid-area: header;
-    background-color: rgba(33, 33, 33, 0.8);
+    background-color: rgba(33, 33, 33, 0.65);
     min-height: 20px;
     max-height: 20px;
     padding-top: 12px;
@@ -65,7 +64,7 @@ body{
 }
 
 #quickjumpmenuwithheader{
-    background-color: rgba(33, 33, 33, 0.8);
+    background-color: rgba(33, 33, 33, 0.65);
     min-height: 20px;
     max-height: -moz-fit-content;
     max-height: fit-content;
@@ -83,7 +82,7 @@ body{
 }
 
 #homemenuwithheader{
-    background-color: rgba(33, 33, 33, 0.8);
+    background-color: rgba(33, 33, 33, 0.65);
     min-height: 20px;
     max-height: -moz-fit-content;
     max-height: fit-content;
@@ -115,7 +114,7 @@ header{
 }
 
 .toolbar{
-    background-color: rgba(33, 33, 33, 0.8);
+    background-color: rgba(33, 33, 33, 0.65);
     min-height: 20px;
     max-height: 20px;
     padding-top: 12px;
@@ -140,7 +139,7 @@ header{
 }
 
 .quicknav{
-    background-color: rgba(22, 22, 22, 0.8);
+    background-color: rgba(33, 33, 33, 0.65);
     min-height: 20px;
     max-height: 20px;
     padding-top: 12px;
@@ -174,7 +173,7 @@ main{
 
 footer{
     grid-area: footer;
-    background-color: rgb(33, 33, 33, 0.8);
+    background-color: rgba(33, 33, 33, 0.65);
     color: white;
     font-size: 14px;
 }
@@ -185,8 +184,13 @@ main > p, h1{
 }
 
 footer > p{
-    margin-right: 20px;
-    text-align: right;
+    margin: 20px;
+    text-align: center;
+}
+
+.done{
+    margin: 20px;
+    text-align: center;
 }
 
 .undertext{
@@ -244,8 +248,8 @@ hr{
 
 .installertext{
     text-align: left;
-    padding-left: 64px;
-    padding-right: 64px;
+    max-width: 1200px;
+    margin: auto;
     color:rgb(192, 192, 192);
 }
 
@@ -320,6 +324,12 @@ hr{
     color: white;
     margin-bottom: 15px;
     border-radius: 15px;
+    transition: all ease-in .15s;
+}
+
+.downld:hover {
+    background-color: rgb(0, 58, 8);
+    cursor: pointer;
 }
 
 .downloadbtn{
@@ -331,16 +341,47 @@ hr{
     text-align: left;
 }
   
-.downld:hover {
-    background-color: rgb(0, 37, 5);
+.downloadbtn:hover{
     cursor: pointer;
+}
+
+.downwin10, .downwin11{
+    padding: 20px;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    transition: all ease-in .15s;
+    
+}
+.downwin10 {
+
+    background-color: #4781ff;
+
+}
+
+.downwin11{
+    background-color: #145eff;
+}
+
+.downwin10:hover, .downwin11:hover {
+    background-color: rgb(36, 58, 121);
+    cursor: pointer;
+}
+
+.downloadbtn{
+    font-family: Jost, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    color: white;
+    border: none;
+    background: none;
+    text-align: left;
 }
 
 .downloadbtn:hover{
     cursor: pointer;
 }
 
-@media screen and (width > 1024px) {
+@media screen and (width > 1210px) {
 
     #quickjumpmenuwithheader{
         display: none !important; 
@@ -365,13 +406,17 @@ hr{
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1210px) {
 
     .quicknav > a{
         display: none;
     }  
     .shquick{
         display: inline-block;
+    }
+    .installertext{
+        margin-left: 42px;
+        margin-right: 42px;
     }
 }
 
@@ -381,11 +426,6 @@ hr{
         overflow: hidden;
         background-color: #333;
         position: relative;
-    }
-
-    footer > p{
-        text-align: center;
-        margin-left: 20px;
     }
 
     .toolbar{
@@ -422,5 +462,10 @@ hr{
 
     .shquick{
         display: none;
+    }
+    
+    .installertext{
+        margin-left: 42px;
+        margin-right: 42px;
     }
 }
