@@ -2,9 +2,8 @@ window.onload = function WindowLoad(event) {
   const date = new Date()
   const saveDate = Date.parse(localStorage.getItem("Agree"))
   var dif = date.getTime() - saveDate
-
   console.log(dif)
-  // Don't hide since 15 minutes of agreement
+  // Keep warning hidden for a set period of time (15 minutes)
   if(dif < 15*60*1000) {
     macosUnhide(0)
   }
@@ -38,7 +37,6 @@ function macosUnhide(doreset) {
   const date = new Date()
   if(doreset)
     localStorage.setItem("Agree", date)
-
   var text = document.getElementById("mactext");
   var notice = document.getElementById("alert");
     text.style.display = "block";

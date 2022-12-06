@@ -7,13 +7,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#191919"/>
+    <meta name="theme-color" content="#191919" />
     <title>Windows - OpenOS (SE)</title>
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <link rel="icon" type="image/png" href="/favicon/android-chrome-192x192.png" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <!--Här bestämmer jag texten som ska stå på flikraden på webbläsaren.-->
     <link href="style/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="scripts/buttons.js"></script>
     <!--Här länkar jag HTML dokumetet med min CSS. Alla sidor använder samma css.-->
 </head>
@@ -39,9 +40,8 @@
             <a href="#media">Skapa installationsmedia</a>
             <a href="#bios">Förberedelser för BIOS</a>
             <a href="#start">Starta till mediat</a>
-            <a href="windows.html">Installation</a>
-            <a href="windows.html">OOBE</a>
-            <a href="#test">Efter installationen</a>
+            <a href="#installsv">Installation</a>
+            <a href="#efterinstall">Efter installationen</a>
         </nav>
         <nav id="quickjumpmenuwithheader">
             <a href="#pre">Förberedelser</a>
@@ -56,13 +56,10 @@
             <a href="#start">Starta till mediat</a>
             <br>
             <br>
-            <a href="windows.html">Installation</a>
+            <a href="#installsv">Installation</a>
             <br>
             <br>
-            <a href="windows.html">OOBE</a>
-            <br>
-            <br>
-            <a href="#test">Efter installationen</a>
+            <a href="#efterinstall">Efter installationen</a>
         </nav>
         <nav id="homemenuwithheader">
             <a href="index.html">Hem</a>
@@ -162,7 +159,9 @@
                 har laddat ned filen behöver du packa upp den och sedan öppna mappen som den har packats upp till.
                 Högerklicka på ett tomt utrymme och klicka på "Öppna Terminal här". I terminalen skriver du kommandot
                 som finns nedan. Den kommer att köra VentoyWeb.sh. SH är en skriptfil likt .bat i Windows. </p>
-            <p class="code">sudo ./VentoyWeb.sh</p>
+            <div class="code">
+                > sudo ./VentoyWeb.sh
+            </div>
             <p>3. Skriptet bör har startat Ventoy Web. I terminalrutan bör du se en lokal IP address (en rad med
                 siffror, ofta 127.0.0.1). Skriv in dem i din webbläsare och tryck på Enter.<br><br>4. I och med att vi
                 nog kommer installera detta på UEFI hårdvara behöver vi gå till "Option" -> "Partition Style" och välja
@@ -189,15 +188,83 @@
             <p class="bold">Förberedelser för BIOS</p>
             <p>Om du installerar Windows 10 behöver du nog inte göra något här, så du kan hoppa ned direkt till "Starta
                 till minnet". Om du vill köra Windows 11 dock behöver du ändra lite i ditt BIOS.</p>
-            <p>När nan kör Windows 11 måste man ha TPM 2.0, Secure Boot och UEFI. Detta aktiveras i ditt BIOS. BIOS'en
+            <p>När nan kör Windows 11 måste man ha TPM 2.0, Secure Boot och UEFI. Detta aktiveras i ditt BIOS. Ett BIOS
+                (Basic Input and Output System) är ett litet litet operativsystem som anvädna för att konfigurera
+                viktiga inställningar för hur din dator fungerar. BIOS'en
                 skiljer sig åt från märkte till märke, men även modell till modell. Sök upp modellen du har, samt de
                 olika inställningarna du behöver ändra. I de flesta fallen bör de finnas i säkerhetsfliken dock.</p>
+            <div class="info">
+                Du kan gå in i BIOS inställningarna antingen när datorn är av genom att tycka på F10 när datorn startar
+                eller när datorn är på genom att hålla in Shift tangenten medans du trycker på "Starta om". Detta öppnar
+                felsökingsmnyn i Windows. I denna meny kan du så till "Avancerat" -> "UEFI inställningar".
+            </div>
         </section>
         <br>
         <section id="start" class="installertext">
             <p class="bold">Starta till mediat</p>
-   
+            <p>Nu så ska vi starta till själva USB minnet som vi skapade nyss.</p>
+            <p>1. Stäng av datorn om den är på och koppla in USB minnet när datorn är av. <br><br>2. Starta nu datorn
+                och tyck flera gånger på Escape, Delete, F2, F7, F8, F9 eller F10 för att komma åt Boot menyn. Sök upp
+                vad som är boot meny tangenten för just din dator, eller prova dig fram tills du kommer till boot menyn.
+            </p>
+            <div class="info">
+                Om ingen av knapparna som står ovan tar dig till boot menyn (eller start menyn som det heter på svenska)
+                kan du prova med att starta till Windows och sedan hålla in Shift tangenten medans du trycker på "Starta
+                om". Detta öppnar felsökingsmnyn i Windows. I denna meny kan du så till "Avancerat" -> "UEFI
+                inställningar" och i de flesta fallen kommer du få ett val av att gå in i boot menyn därifrån.
+            </div>
+            <p>3. I boot menyn väljer du ditt USB minne. Windows kommer nu börja ladda -- men inte vanliga Windows,
+                installationsprogrammet för Windows.</p>
         </section>
+        <br><br>
+        <section id="installsv" class="installertext">
+            <p class="bold">Installera Windows</p>
+            <p>1. När USB minnet har laddats så klickar du på Nästa och godkänner vilkoren. <br><br>2. Vi väljer
+                "Installera bara Windows" och inte "Uppgradera" eftersom vi inte har
+                Windows installerat. <br><br>3. I menyn som kommer upp så kommer Windows fråga dig vilket partition,
+                vilket är mer
+                eller mindre en uppdelning av en hårddisk, som den ska installera på. Ta bort allt och välj "Oallokerat
+                utrymme" och klicka på nästa. <br><br> 4. Windows installeras nu till din hårddisk. Detta kan ta en
+                ganska lång tid, så vänta. Om datorn startar igen till USB minnet efter installationen så behöver du
+                koppla ut minnet och starta om
+                datorn. 5. Efter installationen så behöver du välja dina inställningar och skapa ett konto. Om du vill
+                anväda ett
+                lokalt konto istället för ett Microsoft konto så behöver du koppla ut din nätverks kabel och sedan
+                klicka på "Jag har inte internet" och sedan välja "Fortsätt med begränsad upplevelse". Dessutom kan det
+                vara bra att tacka nej till Microsofts extra funktioner och endast välja det grundläggande valet när
+                Microsoft vill samla in information om din dator. <br><br>6. Koppla upp till internet igen och gå till
+                Windows Update. Låt den installera alla uppdateringar och alla drivrutiner som den tycker ska
+                installeras. Vi kommer anvädna ett program som installerar nya drivrutiner åt oss. Programmet heter SDIO
+                (Snappy Driver Installer Origin). Ladda ned programmet men starta inte det föränn alla uppdateringar har
+                installerats och det ståt "Du är uppdaterad" när du letar efter uppdateringar.
+            <div class="downld" onclick="window.open('https://www.glenn.delahoy.com/snappy-driver-installer-origin/')"">
+                <i class=" fa fa-download"></i> Ladda ned Snappy Driver Installer Origin från Glenn's Page (öppnas
+                i en ny flik, sidan kan vara långsam)
+            </div>
+        </section>
+        <br><br>
+        <section id="efterinstall" class="installertext">
+            <p class="bold">Efter installationen</p>
+            <p>1. När din dator är helt uppdaterad så kan du öppna SDIO. Packa upp alla filer och öppna SDIO_64.exe.
+                Programmet öppnas och du måste tillåta den anslutning till nätverket. Sedan så väljer du "Hämta bara
+                index" så att du endast hämtar de drivrutiner du behöver och inte flera terrabyte. Du kan ändra tema
+                från Metro till Coax om du vill att det ska vara lite snyggare. Sedan väntar du på den söka efter de
+                uppdateringarna du behöver. Klicka på "Makera alla" och sedan "Installera".</p>
+            <div class="info">
+                Det kan vara smart att skapa en återställningspunkt om SDIO skulle råka installera fel drivrutin. Sök
+                efter "Skapa en återställningspunkt" i Windows Sök och sedan konfigurera det och skapa en.
+            </div>
+        </section>
+        <br>
+        <br>
+        <span><hr class="rounded"></span>
+        <br>
+        <p>Bra jobbat! Du har nu en fungerande Windows installation! Det var väl inte så svårt väl?</p>
+        <p>Vi kan nu fortsätta med Linux om du skulle vilja det, men om du känner dig nöjd med bara Windows så är det
+            okej med!</p>
+        <a href="linux.html" class="button">Gå till Linux! → </a>
+        <br>
+        <br>
     </main>
     <footer>
         <!--Och här bestämmer jag vad som finns i min footer, asså min sidfot-->

@@ -233,7 +233,7 @@ footer > p{
     transition: all 0.2s ease-in;
 }
 
-hr.rounded {
+hr{
     border-top: 3px dashed #303030;
     border-bottom: 3px #303030;
     border-left: none;
@@ -263,7 +263,7 @@ hr.rounded {
     color: gray;
 }
 
-/* The alert message box */
+
 #alert {
     padding: 20px;
     background-color: #f44336; /* Red */
@@ -299,9 +299,45 @@ hr.rounded {
 
 .code{
     font-family: monospace;
-    background-color: rgb(58, 58, 58);
     color: white;
-    padding: 12px;
+    padding: 20px;
+    background-color: #222222;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.info, .downld {
+    padding: 20px;
+    background-color: #4043ee;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.downld {
+    padding: 20px;
+    background-color: #084e01;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.downloadbtn{
+    font-family: Jost, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    color: white;
+    border: none;
+    background: none;
+    text-align: left;
+}
+  
+.downld:hover {
+    background-color: rgb(0, 37, 5);
+    cursor: pointer;
+}
+
+.downloadbtn:hover{
+    cursor: pointer;
 }
 
 @media screen and (width > 1024px) {
