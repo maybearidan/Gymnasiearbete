@@ -184,9 +184,41 @@ main > p, h1{
     margin-right: 20px;
 }
 
-footer > p{
+.legalfooter > p{
     margin: 20px;
-    text-align: center;
+    text-align: left;
+    font-size: 11px;
+    color:gray;
+    text-decoration: none;
+}
+
+.navbottom > a, .navbottom > p{
+    text-align: left;
+    margin: 20px;
+    font-size: 11px;
+    display: block;    
+    color: gray;
+}
+
+.navbottom > a{
+    color:white;
+    text-decoration: none;
+}
+
+
+.notes {
+    margin: 20px;
+}
+
+.notes > a{
+    font-size: 11px;
+    color: white;
+    text-decoration: none;
+}
+
+.notes > p{
+    color: gray;
+    display: inline-block;
 }
 
 .done{
