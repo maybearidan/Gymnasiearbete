@@ -26,6 +26,7 @@ body{
     margin: 0px;
     background-color: black;
     min-height: 100%;
+    transition: all 0.2s ease-in;
 }
 
 .toggle, .togglenav{
@@ -270,11 +271,16 @@ hr{
 
 #alert {
     padding: 20px;
-    background-color: #f44336; /* Red */
+    background-color: red; /* Red */
     color: white;
-    margin-bottom: 15px;
-    margin: 40px;
-    border-radius: 20px;
+    margin: 12px;
+    border-radius: 12px;
+}
+
+.textwarnhome {
+    max-width: 1200px;
+    margin: auto;
+    
 }
 
 .agree {
@@ -293,7 +299,7 @@ hr{
 }
 
 .agree:hover{
-    background-color: #ff1515;
+    background-color: #660909;
     transition: all 0.2s ease-in;
 }
 
@@ -310,7 +316,7 @@ hr{
     border-radius: 15px;
 }
 
-.info, .downld {
+.info {
     padding: 20px;
     background-color: #4043ee;
     color: white;
@@ -318,16 +324,32 @@ hr{
     border-radius: 15px;
 }
 
-.downld {
+.warnhome {
+    padding: 20px;
+    background-color: red;
+    color: white;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.textwarnhome {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.downld > button {
     padding: 20px;
     background-color: #084e01;
     color: white;
-    margin-bottom: 15px;
+    width: 100%;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
     border-radius: 15px;
     transition: all ease-in .15s;
+    text-align: center;
 }
 
-.downld:hover {
+.downld:hover > button {
     background-color: rgb(0, 58, 8);
     cursor: pointer;
 }
@@ -345,22 +367,29 @@ hr{
     cursor: pointer;
 }
 
-.downwin10, .downwin11{
-    padding: 20px;
+.downwin10 > button, .downwin11 > button{
+    padding: 10px;
     color: white;
-    margin-bottom: 15px;
-    border-radius: 15px;
     transition: all ease-in .15s;
-    
+    width: 100%;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
 }
+
 .downwin10 {
 
     background-color: #4781ff;
-
+    border-radius: 15px;
+    transition: all ease-in .15s;
 }
 
 .downwin11{
     background-color: #145eff;
+    border-radius: 15px;
+    transition: all ease-in .15s;
 }
 
 .downwin10:hover, .downwin11:hover {
@@ -370,7 +399,6 @@ hr{
 
 .downloadbtn{
     font-family: Jost, -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
     color: white;
     border: none;
     background: none;
@@ -414,7 +442,7 @@ hr{
     .shquick{
         display: inline-block;
     }
-    .installertext{
+    .installertext, .textwarnhome{
         margin-left: 42px;
         margin-right: 42px;
     }
@@ -464,7 +492,7 @@ hr{
         display: none;
     }
     
-    .installertext{
+    .installertext, .textwarnhome{
         margin-left: 42px;
         margin-right: 42px;
     }
