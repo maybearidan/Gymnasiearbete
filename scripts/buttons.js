@@ -33,6 +33,13 @@ function showMenu() {
     }
 }
 
+function macosUnhideTemp() {
+  var text = document.getElementById("mactext");
+  var notice = document.getElementById("alert");
+    text.style.display = "block";
+    notice.style.display = "none";
+}
+
 function macosUnhide(doreset) {
   const date = new Date()
   if(doreset)
