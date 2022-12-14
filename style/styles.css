@@ -9,6 +9,26 @@
     font-weight: bold;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(15, 15, 15);
+    
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(33, 33, 33);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(53, 53, 53);
+}
+
 html{
     scroll-behavior: smooth;
     height: 100%;
@@ -332,6 +352,8 @@ hr{
 .agree:hover{
     background-color: #660909;
     transition: all 0.2s ease-in;
+    cursor: pointer;
+    
 }
 
 #mactext{
