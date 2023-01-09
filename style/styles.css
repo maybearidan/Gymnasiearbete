@@ -465,6 +465,7 @@ hr{
 .meme404{
     width: 40vw;
     height: 40vw;
+    border-radius: 20px;
 }
 
 @media screen and (width > 1210px) {
