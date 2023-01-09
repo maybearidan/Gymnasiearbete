@@ -462,6 +462,11 @@ hr{
     cursor: pointer;
 }
 
+.meme404{
+    width: 40vw;
+    height: 40vw;
+}
+
 @media screen and (width > 1210px) {
 
     #quickjumpmenuwithheader{
